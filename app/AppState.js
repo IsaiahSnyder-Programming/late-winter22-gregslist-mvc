@@ -15,13 +15,13 @@ const testCar = new Car(
   })
 
 const testHouse = new House({
-  make: 'Kanye West',
-  footage: 12,
-  year: 1200,
-  price: 10,
-  description: 'yeah',
+  bedroom: 2,
+  bathroom: 1.5,
+  sqFeet: 10,
+  price: 1500,
+  description: 'oh yeah',
   color: '#ffffff',
-  imgUrl: "//thiscatdoesnotexist.com/"
+  imgUrl: '//thiscatdoesnotexist.com/'
 })
 
 class AppState extends EventEmitter {

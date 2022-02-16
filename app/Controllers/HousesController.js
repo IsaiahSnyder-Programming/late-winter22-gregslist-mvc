@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import { getHouseForm } from "../Components/HouseForm.js";
 import { housesService } from "../Services/HousesService.js";
 
 
@@ -15,6 +16,29 @@ export class HousesController{
 
     viewHouses() {
         _draw()
+        document.getElementById('modal-body-slot'). innerHTML = getHouseForm()
+    }
+
+    createHouse(event) {
+        event.preventDefault()
+
+        let form = event.target
+
+        let newHouse = {
+            bedroom: form.bedroom.value,
+            bathroom: form.bathroom.value,
+            sqFeet: form.sqFeet.value,
+            price: form.price.value,
+            description: form.description.value,
+            color: form.color.value,
+            imgUrl: form.imgUrl.value
+        }
+        console.log('new house', newHouse);
+        housesService.createHouse(newHouse)
+
+        let nList = document.getElementById('new-listing')
+        form.reset()
+        bootstrap.Modal.getOrCreateInstance(nList).hide()
     }
 
     deleteHouse(houseId) {

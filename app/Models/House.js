@@ -2,11 +2,11 @@ import { generateId } from "../Utils/generateId.js"
 
 
 export class House{
-    constructor({make, footage, year, price, description, color, imgUrl}) {
+    constructor({bedroom, bathroom, sqFeet, price, description, color, imgUrl}) {
         this.id = generateId()
-        this.make = make
-        this.footage = footage
-        this.year = year
+        this.bedroom = bedroom
+        this.bathroom = bathroom
+        this.sqFeet = sqFeet
         this.price = price
         this.description = description
         this.color = color
@@ -19,9 +19,9 @@ export class House{
             <div class="bg-white rounded shadow">
                 <img class="img-fluid rounded-top" src="${this.imgUrl}" alt="car image">
                 <div class="p-3">
-                    <p>${this.make}</p>
-                    <p>${this.footage}</p>
-                    <p>${this.year}</p>
+                    <p>${this.bedroom}</p>
+                    <p>${this.bathroom}</p>
+                    <p>${this.sqFeet}</p>
                     <p>${this.description}</p>
                     <p>${this.price}</p>
                     <p>Color: ${this.color}</p>
