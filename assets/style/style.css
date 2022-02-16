@@ -1,1 +1,5 @@
 /* BASIC STYLES HERE */
+
+.sidebar-height {
+    min-height: 90vh;
+}

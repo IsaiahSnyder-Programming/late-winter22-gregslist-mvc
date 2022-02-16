@@ -17,15 +17,15 @@ export class House{
         return `
         <div class="col-md-4">
             <div class="bg-white rounded shadow">
-                <img class="img-fluid rounded-top" src="${this.imgUrl}" alt="car image">
-                <div class="p-3">
-                    <p>${this.bedroom}</p>
-                    <p>${this.bathroom}</p>
-                    <p>${this.sqFeet}</p>
-                    <p>${this.description}</p>
-                    <p>${this.price}</p>
-                    <p>Color: ${this.color}</p>
-                </div>
+                <img class="img-fluid rounded-top" src="${this.imgUrl}" alt="house image">
+                    <div class="p-3">
+                        <p>Bedrooms: ${this.bedroom}</p>
+                        <p>Bathrooms: ${this.bathroom}</p>
+                        <p>Square Footage: ${this.sqFeet}</p>
+                        <p>$${this.price}</p>
+                        <p>Color: ${this.color}</p>
+                        <p>${this.description}</p>
+                    </div>
                 <button class="btn btn-outline-danger" onclick="app.housesController.deleteHouse('${this.id}')"> delete </button>  
             </div>
         </div>

@@ -5,10 +5,8 @@ import { House } from "../Models/House.js";
 class HousesService {
 
     createHouse(newHouse) {
-        console.log(newHouse);
-
+        console.log('New House', newHouse);
         let thisHouse = new House(newHouse)
-
         ProxyState.houses = [thisHouse, ...ProxyState.houses]
     }
     

@@ -21,7 +21,6 @@ export class HousesController{
 
     createHouse(event) {
         event.preventDefault()
-
         let form = event.target
 
         let newHouse = {
@@ -33,7 +32,6 @@ export class HousesController{
             color: form.color.value,
             imgUrl: form.imgUrl.value
         }
-        console.log('new house', newHouse);
         housesService.createHouse(newHouse)
 
         let nList = document.getElementById('new-listing')
